@@ -391,6 +391,7 @@ void get_mpdstatus(void) {
       return;
     } else if(resp.equals("TOUT")){
       Serial.println("mpd timeout.");
+      return;
     }
 
     val = resp.substring(resp.indexOf(' ')+1);
@@ -431,6 +432,7 @@ void get_currentsong(void) {
       return;
     } else if(resp.equals("TOUT")){
       Serial.println("mpd timeout.");
+      return;
     }
     
     val = resp.substring(resp.indexOf(' ')+1);
